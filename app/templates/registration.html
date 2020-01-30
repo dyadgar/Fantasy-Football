@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block my_block %}
+<div class="container">
+    <form class="form-horizontal" method="post">
+        {{ register.hidden_tag() }}
+        <div>
+        {{ register.username.label }}
+        {{ register.username(size=32) }}
+        </div>
+        <br>
+        <div>
+        {{ register.email.label }}
+        {{ register.email(size=32) }}
+        </div>
+        <br>
+        <div>
+        {{register.password.label }}
+        {{ register.password(size=32) }}
+        </div>
+        <br>
+        <button class="btn btn-primary">
+            {{ register.submit() }}
+        </button>
+
+    </form>
+</div>
+
+{% endblock %}

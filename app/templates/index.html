@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UEFA</title>
+
+</head>
+<body>
+{% extends 'base.html' %}
+{% block my_block %}
+<!-- <div class="container"> -->
+	<header class="section1">
+		<nav class="bar d-flex justify-content-center">
+			<img src="static/logo2.svg" class="logo">
+			<h1 class="name">TEAM D&D</h1>
+		</nav>
+
+		<video autoplay muted loop id="foot">
+	  		<source src="static/uefa.mp4" type="video/mp4">
+		</video>
+
+			<a class="btn btn-primary d-flex justify-content-center" href="{{ url_for('manageTeam') }}">Create your team</a>
+
+	</header>
+
+
+	<div class="partners">
+		<h2>Our Partners</h2>
+		<div class="container">
+			<div class="row">
+			    <div class="col-3 col-sm-3 col-md-3 colones">
+			     <img src="static/partners1.png" width="300px" height="150px">
+			    </div>
+			   	<div class="col-3 col-sm-3 col-md-3 colones">
+			     <img src="static/partners11.png" width="300px" height="150px">
+			   	</div>
+			    <div class="col-3 col-sm-3 col-md-3 colones">
+			      <img src="static/partners4.png" width="300px" height="150px">
+			    </div>
+			</div>
+			<div class="row">
+			    <div class="col-3 col-sm-3 col-md-3 colones">
+			      <img src="static/partners5.png" width="300px" height="150px">
+			    </div>
+			   	<div class="col-3 col-sm-3 col-md-3 colones">
+			      <img src="static/partners7.png" width="300px" height="150px">
+			   	</div>
+			    <div class="col-3 col-sm-3 col-md-3 colones">
+			      <img src="static/partners8.png" width="300px" height="150px">
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- --------------------------------------------------------------------------------------------------------- -->
+	<div class="contact">
+		<h2>Contact Us</h2>
+		<div class="form_img">
+			<div>
+				<form>
+					<div class="form-group row">
+						<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control input" id="inputEmail3" placeholder="Email">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+						<div class="col-sm-10">
+							<input type="password" class="form-control input" id="inputPassword3" placeholder="Password">
+						</div>
+					</div>
+					<div class="butSign">
+						<button type="submit" class="signIn">Sign in</button>
+					</div>
+				</form>
+			</div>
+			<div>
+				<img src="static/placement3.jpg">
+			</div>
+		</div>
+	</div>
+
+
+<!-- </div> -->
+
+
+
+
+
+
+<script type="text/javascript" src="static/script.js"></script>
+{% endblock %}
+</body>
+</html>

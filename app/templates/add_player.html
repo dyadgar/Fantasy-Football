@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% block my_block %}
+
+
+	<div class="main2">
+		<!-- initial field without any lineup -->
+		<div id="first" class="formation0">
+		</div>
+		<!-- field tactical scheme 1 : 4-3-3 -->
+		<div id="second" class="formation_433">
+			<!-- forwards -->
+			<div class="block ">
+				<div class="p w"></div>
+				<div class="p w"></div>
+				<div class="p w"></div>
+			</div>
+			<!-- midfielders -->
+			<div class="block ">
+				<div class="p x"></div>
+				<div class="p x"></div>
+				<div class="p x"></div>
+			</div>
+			<!-- defenders -->
+			<div class="block ">
+				<div class="p y"></div>
+				<div class="p y"></div>
+				<div class="p y"></div>
+				<div class="p y"></div>
+			</div>
+			<!-- goalkeeper -->
+			<div class="block ">
+				<div class="p z"></div>
+			</div>
+		</div>
+		<!-- field tactical scheme 2 : 4-4-2 -->
+		<div id="third" class="formation_442">
+
+			<!-- forwards -->
+			<div class="block2">
+				<div class="p2 w2"></div>
+				<div class="p2 w2"></div>
+			</div>
+			<!-- midfielders -->
+			<div class="block2">
+				<div class="p2 x2"></div>
+				<div class="p2 x2"></div>
+				<div class="p2 x2"></div>
+				<div class="p2 x2"></div>
+
+			</div>
+			<!-- defenders -->
+			<div class="block2">
+				<div class="p2 y2"></div>
+				<div class="p2 y2"></div>
+				<div class="p2 y2"></div>
+				<div class="p2 y2"></div>
+			</div>
+			<!-- goalkeeper -->
+			<div class="block2">
+				<div class="p2 z2"></div>
+			</div>
+		</div>
+		<!-- tactics selection -->
+		<br><br><br>
+
+		<div class="choosePlayers">
+			<form method="post">
+				{{ addPlayer.hidden_tag() }}
+				{{ createTeam.hidden_tag() }}
+
+				<div class="position">
+
+					{{ createTeam.team_name.label() }}
+					{{ createTeam.team_name(size=10) }}
+					<br>
+					{{ createTeam.tactic.label() }}
+					{{ createTeam.tactic() }}
+
+				</div>
+
+				<div class="name">
+					{{ addPlayer.name.label() }}
+					{{ addPlayer.name(size=20) }}
+				</div>
+				<br>
+				<div class="position">
+					{{ addPlayer.position.label() }}
+					{{ addPlayer.position() }}
+
+				</div>
+				<br>
+				<div class="number">
+
+					{{ addPlayer.number.label() }}
+					{{ addPlayer.number(size=10) }}
+				</div>
+
+				<div>
+					<button class="btn btn-first btn-sm">
+						{{ addPlayer.submit() }}
+					</button>
+
+				</div>
+			</form>
+		</div>
+
+				<ul>
+					{% for player in seePlayers %}
+					<li>
+						Player: {{ player.name }} , Number {{ player.number }}, Position {{ player.position }}
+					</li>
+					{% endfor %}
+				</ul>
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

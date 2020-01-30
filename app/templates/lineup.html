@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LINEUP</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Wallpoet&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="static/style2.css">
+</head>
+<body>
+	<div class="main2">
+		<!-- initial field without any lineup -->
+		<div id="first" class="formation0">
+		</div>
+		<!-- field tactical scheme 1 : 4-3-3 -->
+		<div id="second" class="formation_433">
+			<!-- forwards -->
+			<div class="block ">
+				<div class="p w"></div>
+				<div class="p w"></div>
+				<div class="p w"></div>
+			</div>
+			<!-- midfielders -->
+			<div class="block ">
+				<div class="p x"></div>
+				<div class="p x"></div>
+				<div class="p x"></div>
+			</div>
+			<!-- defenders -->
+			<div class="block ">
+				<div class="p y"></div>
+				<div class="p y"></div>
+				<div class="p y"></div>
+				<div class="p y"></div>
+			</div>
+			<!-- goalkeeper -->
+			<div class="block ">
+				<div class="p z"></div>
+			</div>
+		</div>
+        <!-- field tactical scheme 2 : 4-4-2 -->
+		<div id="third" class="formation_442">
+
+			<!-- forwards -->
+			<div class="block2">
+				<div class="p2 w2"></div>
+				<div class="p2 w2"></div>
+			</div>
+			<!-- midfielders -->
+			<div class="block2">
+				<div class="p2 x2"></div>
+				<div class="p2 x2"></div>
+				<div class="p2 x2"></div>
+				<div class="p2 x2"></div>
+
+			</div>
+			<!-- defenders -->
+			<div class="block2">
+				<div class="p2 y2"></div>
+				<div class="p2 y2"></div>
+				<div class="p2 y2"></div>
+				<div class="p2 y2"></div>
+			</div>
+			<!-- goalkeeper -->
+			<div class="block2">
+				<div class="p2 z2"></div>
+			</div>
+		</div>
+       <!-- tactics selection -->
+		<div class="choosePlayers">
+			<select id="formation_selection">
+				<option disabled value="" selected hidden>Tactics</option>
+		  		<option id="opt1" value="one" onchange="Tactic()">4-3-3</option>
+		  		<option id="opt2" value="two">4-4-2</option>
+		  		<option id="opt3" value="three">Not Yet</option>
+		  		<option id="opt4" value="four">Not Yet</option>
+			</select>
+            <br><br><br>
+			Player 1: <input type="text" id="input1" placeholder="Name of your Player" > <button id="button">Enter</button>
+			Player 2: <input type="text" name="A2" placeholder="Name of your Player"><button id="button">Enter</button>
+			
+		</div>
+	</div>
+
+<script type="text/javascript" src="script_1.1.js"></script>
+</body>
+</html>

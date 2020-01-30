@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block my_block %}
+    <div class="container">
+
+      <form class="form-horizontal" method="POST" action="/login">
+        <h2 class="form-horizontal-heading">Log in</h2>
+        {{ form.hidden_tag() }}
+        {{ form.username.label }}
+        {{ form.username }}
+          <br>
+        {{ form.password.label }}
+        {{ form.password }}
+
+        <button class="btn btn-lg btn-primary btn-sm" type="submit">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+    </form>
+</div>
+
+{% endblock %}
